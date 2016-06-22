@@ -8,10 +8,11 @@ class APNsClient(object):
     def __init__(self,
                  cert_file: str,
                  use_sandbox: bool = False,
-                 use_alternate_port: bool = False) -> None: ...
+                 use_alternative_port: bool = False) -> None: ...
 
     def send_notification(self,
                           token_hex: str,
                           notification: Payload,
-                          prioriy: NotificationPriority = NotificationPriority.Immediate,
-                          topic: Optional[str] = None) -> None: ...
+                          priority: NotificationPriority = NotificationPriority.Immediate,
+                          topic: Optional[str] = None,
+                          expiration: Optional[int] = None) -> None: ...
